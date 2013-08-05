@@ -41,3 +41,11 @@ ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
 
+# get the reggiemack-310 bitstarter git repo 
+cd $HOME
+if [ -d ./bitstarter/ ]; then
+    mv bitstarter bitstarter.old
+fi
+cd bitstarter
+git clone https://github.com/reggiemack-310/bitstarter
+cd $HOME
